@@ -10,18 +10,21 @@ class SearchBar extends Component{
 
   render() {
     return (
-      <div>
-        <input
+      <div className='text-center'>
+        <input className='form-control has-error'
+          id='search-input'
+          placeholder='Search Youtube'
+          autofocus='true'
           value= {this.state.term}
-          onChange= {event => this.setState({ term: event.target.value })}
-        />
-
+          onChange= {event => this.onInputChange(event.target.value)}
+        /> <br />
       </div>
     );
   }
 
-  onInputChange(event) {
-    console.log(event);
+  onInputChange(term) {
+    this.setState({term});
+    this.props.onSearchTermChange(term);
   }
 
 }
