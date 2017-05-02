@@ -11,6 +11,8 @@ class SearchBar extends Component{
   render() {
     return (
       <div className='text-center'>
+        <h2>React-YoutubeApp</h2>
+        <hr />
         <input className='form-control has-error'
           id='search-input'
           placeholder='Search Youtube'
